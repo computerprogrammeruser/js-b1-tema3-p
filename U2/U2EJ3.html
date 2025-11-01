@@ -55,6 +55,38 @@
 	<script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
 		
+		function createTitle (text) {
+			if(!document.querySelector('.title')){
+				const elemDivTitle = document.createElement('div');
+				elemDivTitle.classList.add('title')
+				
+				const elemH1 = document.createElement('h1');
+				elemH1.textContent = text;
+				elemDivTitle.appendChild(elemH1);
+
+				const elemMyContent = document.getElementById('myContent');
+				elemMyContent.appendChild(elemDivTitle);				
+			}
+		}
+
+		function createParagraph (text) {
+			if(elemTitle = document.querySelector('.title')){
+				elemTitle = document.querySelector('.title');
+				const elemParagraph = document.createElement('p');
+				elemParagraph.classList.add('paragraph');
+				elemParagraph.textContent = text;
+				elemTitle.appendChild(elemParagraph);
+			}
+		}
+
+		const title = createTitle('Title');
+		const paragraph1 = createParagraph('Paragraph1');
+		const paragraph2 = createParagraph('Paragraph2');
+		const paragraph3 = createParagraph('Paragraph3');
+
+		paragraph3.remove();
+		
+	
 	</script>
     <script defer id="test">
         /**
