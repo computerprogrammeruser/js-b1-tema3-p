@@ -47,7 +47,15 @@
     </div>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-          
+        
+        const circle = document.getElementById('circle');
+        const rect = document.getElementById('rect');
+        const polygon = document.getElementById('polygon');
+
+        circle.addEventListener('mouseover', event => circle.classList.replace('red', 'green'));
+        rect.addEventListener('mouseover', event => rect.classList.replace('green', 'orange'));
+        polygon.addEventListener('mouseover', event => polygon.classList.replace('orange', 'red'));
+      
 	</script>
     <script defer id="test">
         /**

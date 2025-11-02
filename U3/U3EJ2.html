@@ -78,6 +78,28 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        function showClass(event){
+            const elemClass = event.target.className;
+            document.getElementById('myContent').textContent = elemClass;
+        }
+        /* const colours = document.querySelectorAll('.red, .orange, .green');
+        colours.forEach(colour => {
+            colour.addEventListener('click', showClass);
+        }); */
+
+        const red = document.querySelector('.red');
+        const green = document.querySelector('.green');
+        const orange = document.querySelector('.orange')
+
+        if (red){
+            red.addEventListener('click', showClass);
+        }
+        if (green){
+            green.addEventListener('click', showClass);
+        }
+        if (orange){
+            orange.addEventListener('click', showClass);
+        }
         
     </script>
     <script defer id="test">
