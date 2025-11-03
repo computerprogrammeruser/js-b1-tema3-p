@@ -68,6 +68,17 @@
         </form>
         <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        function securityPolicy(event){
+            if (event.target.id == 'armored-windows' || event.target.id == 'tinted-windows'){
+                document.querySelector('#sunroof').checked = false;
+            }
+            if (event.target.id == 'sunroof'){
+                document.querySelector('#armored-windows').checked = false;
+                document.querySelector('#tinted-windows').checked = false;
+            }
+        }
+
+        document.querySelectorAll("input[name='extras']").forEach(input => input.addEventListener('change', securityPolicy));
 
         </script>
         <script defer id="test">
